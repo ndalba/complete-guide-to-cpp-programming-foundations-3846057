@@ -7,9 +7,13 @@
 #include <string>
 
 std::vector<int> SelectKeyPoints(std::vector<int> distances, int checkpointIndex){
-    std::vector<int> result;
+    std::vector<int> result = {0, 0, 0}; // Initialize the result vector with three elements
 
     // Write your code here
+
+    result[0] = distances[0];
+    result[1] = distances[checkpointIndex];
+    result[2] = distances.back(); // Get the last element of the distances vector
     
     return result;
 }
